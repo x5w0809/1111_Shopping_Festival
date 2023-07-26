@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  // height: 100%;
+  font-family: $fontfamily;
+}
+body {
+  scroll-behavior: smooth;
+  font-size: 14px;
+  -webkit-tap-highlight-color: transparent;
+  ::selection {
+    background: #8f2d9e;
+  }
+}
+.user-select-none {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+#__nuxt,
+#__layout {
+}
+#main-flex {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: all 0.2s ease;
+}
+#main {
+  overflow: hidden;
+  position: relative;
+  flex-grow: 1;
+  background-color: #8f2d9e;
+  transition: 0.5s linear;
+  transform-origin: center;
+  > .container {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.dataFetching,
+.swal2-shown {
+  #main-flex {
+    filter: blur(3px);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font-size: 14px;
+}
+.contentWrap {
+  max-width: $contentWrap;
+  margin: 0 auto;
+  @include contentWrap {
+    margin: 0 20px;
+  }
+}
+.contentWrap2 {
+  max-width: $contentWrap2;
+  margin: 0 auto;
+  @include contentWrap2 {
+    margin: 0 8%;
+  }
+}
+.contentWrap3 {
+  max-width: $contentWrap3;
+  margin: 0 auto;
+  @include contentWrap3 {
+    margin: 0 20px;
+  }
+}
+
+.aa-hide {
+  display: none;
+}
